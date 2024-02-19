@@ -1,24 +1,42 @@
-﻿namespace MauiEqSegundoGrau
+﻿using ObjCRuntime;
+
+namespace MauiEqSegundoGrau
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void Button_Clicked(object sender, EventArgs e)
         {
-            count++;
+            double a = Convert.ToDouble(txt_a.Text);
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            double b = Convert.ToDouble(txt_b.Text);
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            double c = Convert.ToDouble(txt_c.Text);
+
+            double delta = (b * b) - (4 * a * c);
+
+            double x1 = ((-1 * b) + Math.Sqrt(delta)) / (2 * a);
+            double x2 = 0;
+
+            string msg = $"O resultado é {x1} e {x2}";
+
+            DisplayAlert
+
+            if (delta > 0)
+            {
+                double x1 = -b + Math.Sqrt(delta) / 2 * a;
+
+                double x2 = -b - Math.Sqrt(delta) / 2 * a;
+
+            }else
+            {
+
+            }
+
         }
     }
 
