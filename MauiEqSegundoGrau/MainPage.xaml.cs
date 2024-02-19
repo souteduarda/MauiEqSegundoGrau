@@ -24,18 +24,7 @@ namespace MauiEqSegundoGrau
 
             string msg = $"O resultado é {x1} e {x2}";
 
-            DisplayAlert
-
-            if (delta > 0)
-            {
-                double x1 = -b + Math.Sqrt(delta) / 2 * a;
-
-                double x2 = -b - Math.Sqrt(delta) / 2 * a;
-
-            }else
-            {
-
-            }
+            DisplayAlert("Resultado", msg, "Fechar");
 
         }
     }
